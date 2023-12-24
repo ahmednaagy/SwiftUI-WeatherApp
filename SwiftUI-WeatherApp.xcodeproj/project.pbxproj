@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D01B13C92B32A61700315F06 /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01B13C82B32A61700315F06 /* WeatherButton.swift */; };
+		D01B13CB2B33E60900315F06 /* WeatherDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01B13CA2B33E60900315F06 /* WeatherDay.swift */; };
 		D04E03062B2EBDC600EE85AC /* SwiftUI_WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04E03052B2EBDC600EE85AC /* SwiftUI_WeatherAppApp.swift */; };
 		D04E03082B2EBDC600EE85AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04E03072B2EBDC600EE85AC /* ContentView.swift */; };
 		D04E030A2B2EBDC700EE85AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04E03092B2EBDC700EE85AC /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		D01B13C82B32A61700315F06 /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
+		D01B13CA2B33E60900315F06 /* WeatherDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDay.swift; sourceTree = "<group>"; };
 		D04E03022B2EBDC600EE85AC /* SwiftUI-WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-WeatherApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04E03052B2EBDC600EE85AC /* SwiftUI_WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WeatherAppApp.swift; sourceTree = "<group>"; };
 		D04E03072B2EBDC600EE85AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				D04E03092B2EBDC700EE85AC /* Assets.xcassets */,
 				D04E030B2B2EBDC700EE85AC /* Preview Content */,
 				D01B13C82B32A61700315F06 /* WeatherButton.swift */,
+				D01B13CA2B33E60900315F06 /* WeatherDay.swift */,
 			);
 			path = "SwiftUI-WeatherApp";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D04E03082B2EBDC600EE85AC /* ContentView.swift in Sources */,
+				D01B13CB2B33E60900315F06 /* WeatherDay.swift in Sources */,
 				D04E03062B2EBDC600EE85AC /* SwiftUI_WeatherAppApp.swift in Sources */,
 				D01B13C92B32A61700315F06 /* WeatherButton.swift in Sources */,
 			);

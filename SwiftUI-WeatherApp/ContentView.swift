@@ -11,6 +11,15 @@ struct ContentView: View {
     
     @State private var isNight = false
     
+    /// Sample data for days of the week
+    private var weatherData: [WeatherDay] = [
+        WeatherDay(dayOfTheWeek: "TUE", imageName: "cloud.sun.fill", temperature: 74),
+        WeatherDay(dayOfTheWeek: "WED", imageName: "sun.max.fill", temperature: 88),
+        WeatherDay(dayOfTheWeek: "THU", imageName: "wind.snow", temperature: 55),
+        WeatherDay(dayOfTheWeek: "FRI", imageName: "sunset.fill", temperature: 60),
+        WeatherDay(dayOfTheWeek: "SAT", imageName: "snow", temperature: 25),
+    ]
+    
     var body: some View {
         ZStack {
             BackgroundView(isNight: $isNight)
@@ -21,11 +30,9 @@ struct ContentView: View {
                 MainWeatherStatusView(imageName: isNight ? "cloud.sun.fill" : "moon.stars.fill", temperature: 76)
                 
                 HStack(spacing: 20) {
-                    ExtractedView(dayOfTheWeek: "TUE", imageName: "cloud.sun.fill", temperature: 74)
-                    ExtractedView(dayOfTheWeek: "WED", imageName: "sun.max.fill", temperature: 88)
-                    ExtractedView(dayOfTheWeek: "THU", imageName: "wind.snow", temperature: 55)
-                    ExtractedView(dayOfTheWeek: "FRI", imageName: "sunset.fill", temperature: 60)
-                    ExtractedView(dayOfTheWeek: "SAT", imageName: "snow", temperature: 25)
+                    ForEach(weatherData, id: \.dayOfTheWeek) { day in
+                        ExtractedView(weatherDay: day)
+                    }
                 }
                 
                 Spacer()
@@ -48,21 +55,19 @@ struct ContentView: View {
 
 struct ExtractedView: View {
     
-    var dayOfTheWeek: String
-    var imageName: String
-    var temperature: Int
+    var weatherDay: WeatherDay
     
     var body: some View {
         VStack {
-            Text(dayOfTheWeek)
+            Text(weatherDay.dayOfTheWeek)
                 .font(.system(size: 16, weight: .medium, design: .default))
                 .foregroundStyle(.white)
-            Image(systemName: imageName)
+            Image(systemName: weatherDay.imageName)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
-            Text("\(temperature)°")
+            Text("\(weatherDay.temperature)°")
                 .font(.system(size: 28, weight: .medium))
                 .foregroundStyle(.white)
         }
